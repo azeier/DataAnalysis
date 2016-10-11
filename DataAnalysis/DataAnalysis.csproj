@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChessBrawl.cs" />
+    <Compile Include="ChessBrawl\Node.cs" />
+    <Compile Include="ChessBrawl\Objects\Action.cs" />
+    <Compile Include="ChessBrawl\Analysis.cs" />
+    <Compile Include="ChessBrawl\Objects\Game.cs" />
+    <Compile Include="ChessBrawl\Objects\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

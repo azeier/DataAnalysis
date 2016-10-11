@@ -6,7 +6,7 @@ namespace DataAnalysis
 	{
 		private static void Main()
 		{
-			new ChessBrawl("C:/out.csv", "D:/output.txt").CreateTree(3);
+			new ChessBrawl.Analysis("C:/out.csv").CreateActionTree(100, "D:/output.txt");
 			Console.WriteLine("Done");
 			Console.ReadKey();
 		}
