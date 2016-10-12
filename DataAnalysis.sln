@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnalysis", "DataAnalysis\DataAnalysis.csproj", "{D7451347-C82F-4A12-A126-69E08C1FD569}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FDataAnalaysis", "FDataAnalaysis\FDataAnalaysis.fsproj", "{B49CF403-D010-49EB-BBD0-35FC447ED381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D7451347-C82F-4A12-A126-69E08C1FD569}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7451347-C82F-4A12-A126-69E08C1FD569}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7451347-C82F-4A12-A126-69E08C1FD569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49CF403-D010-49EB-BBD0-35FC447ED381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49CF403-D010-49EB-BBD0-35FC447ED381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49CF403-D010-49EB-BBD0-35FC447ED381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49CF403-D010-49EB-BBD0-35FC447ED381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
