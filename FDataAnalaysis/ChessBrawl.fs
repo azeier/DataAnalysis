@@ -65,6 +65,24 @@ let GenTree (games:Game seq, depth:int) =
             if player.Result = "WON" then node.Wins <- node.Wins+1 else node.Losses <- node.Losses + 1
     (root)
 
+let CardWinrateByTurn (games:Game seq, cardIds:string[]) =
+    let queenStats = Array.replicate 35 (0, 0)
+    let getQueenAction (game:Game, result:string) = 
+        match result with 
+        | r when r = game.P1.Result -> game.P1.Plays
+        | _ -> game.P2.Plays
+        |> Seq.tryFind(fun x -> cardIds |> Array.contains x.CardId), result = "WON"        
+    let updateStats (action:Action option, won:bool) =
+        if action.IsSome then
+            let wins, losses = queenStats.[action.Value.Turn.Value]
+            let w, l = if won then (1, 0) else (0, 1)
+            queenStats.[action.Value.Turn.Value] <- (wins + w, losses + l)
+    for game in games do
+        (game, "WON") |> getQueenAction |> updateStats |> ignore
+        (game, "LOST") |> getQueenAction  |> updateStats |> ignore
+    queenStats |> Array.map(fun (wins, losses) -> (float wins / float (wins + losses), wins + losses)) |> Array.indexed |> printfn "%A"
+    0
+
 let rec Stringify (n:Node) = 
     seq {
         if n.Wins > 0 || n.Losses > 0 then 
